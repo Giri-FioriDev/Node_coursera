@@ -193,7 +193,10 @@ Arrow Functions
 *   Limitations:
     
     *   Cannot be used in all situations (e.g., as constructors or with this binding).
-        
+
+Arrays 
+----------------
+
 1.  **Arrays in JavaScript**:
     
     *   Arrays are sequential data storage structures.
@@ -257,6 +260,101 @@ Arrow Functions
         
     *   When using new Array(3), the array length is 3, but it contains empty slots (not actual elements).
 
+9. **Adding Elements to an Array**
+
+ - To add a new car make to the list, you can use one of the following methods:
+
+  ### 1. **Using push()**
+
+  * Adds an element to the **end** of the array.
+        
+     ```javascript 
+        carMakes.push("BMW");
+        console.log(carMakes);
+        
+    - OUTPUT :  ["Nissan", "Ford", "Tata", "BMW"]
+        
+  * The new element (BMW) is added at index 3.
+        
+  ### 2. **Using unshift()**
+
+  * Adds an element to the **beginning** of the array.
+        
+     ````javascript
+          carMakes.unshift("Audi");
+          console.log(carMakes);
+        
+    - OUTPUT : ["Audi", "Nissan", "Ford", "Tata", "BMW"]
+        
+  * The new element (Audi) is added at index 0, and the rest of the elements are shifted by one position.
+        
+
+10. **Removing Elements from an Array**
+
+  To remove elements from the array, you can use one of the following methods:
+
+  ### 1. **Using pop()**
+
+  * Removes the **last element** from the array.
+      
+    ````javascript
+        carMakes.pop();
+        console.log(carMakes);      
+
+      - OUTPUT ["Audi", "Nissan", "Ford", "Tata"]
+      
+  * The last element (BMW) is removed.
+      
+
+  ### 2. **Using shift()**
+
+  *   Removes the **first element** from the array.
+      
+  *  ````javascript
+           carMakes.shift();console.log(carMakes);
+      
+          OUTPUT: ["Nissan", "Ford", "Tata"]
+      
+  *   The first element (Audi) is removed.
+      
+
+11. **Creating an Array of Arrays**
+
+  You can also create an **array of arrays** to store more complex data, such as car details (make, model, and color).
+
+  ### Example:
+
+  1. ```javascript
+      let make = "Eagle";
+      let model = "Talon TSI";
+      let color = "blue";
+      ```
+  
+  2. ```javascript
+      let car = [];
+      car.push(make);
+      car.push(model);
+      car.push(color);
+      ```
+  
+  3. ```javascript
+      let cars = [];
+      cars.push(car);
+      ```
+  
+  4. ```javascript
+      console.log(cars);
+      ```
+  
+  5. ```
+      [["Eagle", "Talon TSI", "blue"]]
+      ```
+  
+  * The outer array contains one element, which is another array with three elements:
+      * 0: "Eagle" (make)
+      * 1: "Talon TSI" (model)
+      * 2: "blue" (color)
+
 
 Summary of Key Concepts
 -----------------------
@@ -283,3 +381,10 @@ Summary of Key Concepts
     
 11. JavaScript arrays differ from those in other languages due to their dynamic nature and lack of fixed length.
 
+12. Arrays in JavaScript can be declared using **square brackets** or the **Array constructor**.
+    
+13. Elements can be added to an array using **push()** (end) or **unshift()** (beginning).
+
+14. Elements can be removed using **pop()** (end) or **shift()** (beginning).
+    
+15. Arrays can store other arrays, allowing for the creation of **multi-dimensional arrays**.
